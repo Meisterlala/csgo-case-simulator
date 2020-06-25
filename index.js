@@ -142,7 +142,11 @@ function RefreshList() {
     towrite = towrite.concat("<tr><td>");
     towrite = towrite.concat(h[i][0]);
     towrite = towrite.concat('</td><td><span style="color:');
-    towrite = towrite.concat(h[i][1]);
+    if (h[i][1] == "blue") {
+      towrite = towrite.concat("white");
+    } else {
+      towrite = towrite.concat(h[i][1]);
+    }
     towrite = towrite.concat('">');
     towrite = towrite.concat(h[i][2]);
     towrite = towrite.concat("</span></td></tr>");
